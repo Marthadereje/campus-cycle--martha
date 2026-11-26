@@ -46,7 +46,16 @@ export const Clinics: CollectionConfig = {
       },
     },
     // Add new clinic fields here, above the time slots list, so they also show above it in /admin.
-
+{
+  name: 'whatToBring',
+  type: 'array',
+  fields: [
+    {
+      name: 'item',
+      type: 'text',
+    },
+  ],
+},
     // The reverse side (a join) of the one-to-many: one clinic has many time slots. The link is stored
     // once, in each time slot's "clinic" field.
     {
